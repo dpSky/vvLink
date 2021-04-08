@@ -2,11 +2,11 @@
 
 echo '开始移除旧服务'
 
-folder=e85f234918088614d45ae76d57521263-v2
+folder=$1-v2
 
 #kill&remove old servers
-kill -9 $(ps -ef | grep ${folder} | grep -v grep | grep -v bash | awk '{print $folder}') 1 > /dev/null
-kill -9 $(ps -ef | grep defunct | grep -v grep | awk '{print $folder}') 1 > /dev/null
+kill -9 $(ps -ef | grep ${folder} | grep -v grep | grep -v bash | awk '{print $1}') 1 > /dev/null
+kill -9 $(ps -ef | grep defunct | grep -v grep | awk '{print $1}') 1 > /dev/null
 systemctl stop v2ray.service
 systemctl disable v2ray.service
 systemctl stop vvlink.service

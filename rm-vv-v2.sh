@@ -2,7 +2,8 @@
 
 echo '开始移除旧服务'
 
-folder=$1-v2
+key=$1
+folder=$key-v2
 
 #kill&remove old servers
 kill -9 $(ps -ef | grep ${folder} | grep -v grep | grep -v bash | awk '{print $1}') 1 > /dev/null

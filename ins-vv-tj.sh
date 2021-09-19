@@ -51,7 +51,7 @@ cp vvlink.crt /root/.cert/server.crt
 cp vvlink.key /root/.cert/server.key
 chmod 400 /root/.cert/server.*
 wget https://github.com/tokumeikoi/tidalab-trojan/releases/latest/download/tidalab-trojan
-wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.4/trojan-go-linux-amd64.zip
+wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.6/trojan-go-linux-amd64.zip
 
 unzip trojan-go-linux-amd64.zip
 chmod 755 *
